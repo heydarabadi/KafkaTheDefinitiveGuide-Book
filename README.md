@@ -1,7 +1,6 @@
-# Kafka: The Definitive Guide – Summary & Knowledge Base
-**Real-Time Data and Stream Processing at Scale** (2nd Edition)
+# Awesome Kafka
 
-This project provides a deep, chapter-by-chapter, practical summary of the reference book **Kafka: The Definitive Guide (2nd Edition)** in Persian (Farsi), along with internals deep-dives, code examples, diagrams, and a curated list of the best up-to-date Kafka resources (as of 2026).
+This project provides a deep, chapter-by-chapter, practical summary of the reference book **Kafka: The Definitive Guide (2nd Edition)** , along with internals deep-dives, code examples, diagrams, and a curated list of the best up-to-date Kafka resources (as of 2026).
 
 **Authors of the book:**  
 Gwen Shapira, Todd Palino, Rajini Sivaram, Krit Petty
