@@ -1,29 +1,50 @@
 # Awesome Kafka
 
-This project provides a deep, chapter-by-chapter, practical summary of the reference book **Kafka: The Definitive Guide (2nd Edition)** , along with internals deep-dives, code examples, diagrams, and a curated list of the best up-to-date Kafka resources (as of 2026).
+This project is a comprehensive **Awesome Kafka** resource — a deep, chapter-by-chapter, practical summary of the reference book **Kafka: The Definitive Guide** (2nd Edition and updates), combined with in-depth exploration of Kafka internals, code examples, diagrams, production tips, and a curated collection of the best online & offline resources (updated as of 2026).
 
-**Authors of the book:**  
-Gwen Shapira, Todd Palino, Rajini Sivaram, Krit Petty
+We are building a complete learning path focused on **understanding Kafka internals** (replication protocol, log structure, controller, ISR, partition assignment, leader election, KRaft mode, Tiered Storage, exactly-once semantics, etc.) using both **online resources** (blogs, videos, GitHub repos, conference talks) and **offline resources** (books, documentation).
 
-## Project Goals
+### Core Book (Current Focus)
+- **Kafka: The Definitive Guide** (2nd Edition + updates)  
+  Authors: Gwen Shapira, Todd Palino, Rajini Sivaram, Krit Petty  
+  → Still the most authoritative, comprehensive, and production-oriented reference in 2026.
 
-- Readable, accurate, and practical chapter summaries in Persian (Farsi)
-- Clear explanations of key concepts with real-world examples and production-grade tips
-- In-depth exploration of Apache Kafka internals: replication, log structure, controller, ISR, partition assignment, leader election, ...
-- Collection of top-tier resources (**Awesome Kafka**): tools, blogs, videos, courses, open-source projects
+### Project Goals
+- Readable, accurate, and practical chapter summaries with real-world context
+- Clear explanations of Kafka concepts, internals, and production best practices
+- Deep dives into Kafka architecture and internals with references to online/offline sources
+- Curated **Awesome Kafka** list: top blogs, authors, courses, videos, open-source tools, books, and more
+- Expandable structure: we plan to add summaries and deep-dives for **more Kafka-related books** in the future
 
-## Why This Book Matters
+### Why This Book Matters (Kafka: The Definitive Guide)
+It remains the gold standard for deep Kafka knowledge, covering:
+- Internal architecture & replication protocol
+- Durability, availability, ISR, leader election
+- Exactly-Once Semantics & Transactions
+- Security, monitoring, large-scale operations
+- Kafka Connect, Kafka Streams, ksqlDB
+- KRaft mode (ZooKeeper-free), Tiered Storage, and recent Kafka version features
 
-**Kafka: The Definitive Guide** is widely regarded as the most authoritative and comprehensive resource for deep Apache Kafka knowledge.  
-It covers everything from fundamentals to advanced production topics:
+### Planned Book Expansions
+We will gradually add summaries and internals deep-dives for other high-quality Kafka/streaming books, including (but not limited to):
+- Kafka Streams in Action (Bill Bejeck)
+- Kafka Connect in Action (or similar connector-focused books)
+- Designing Data-Intensive Applications (relevant Kafka chapters – Martin Kleppmann)
+- Streaming Systems (Tyler Akidau et al.)
+- Building Event-Driven Microservices (Adam Bellemare)
+- And more emerging titles on KRaft, Tiered Storage, and modern streaming patterns
 
-- Internal architecture and replication protocol
-- Durability, availability, and Exactly-Once Semantics guarantees
-- Security, monitoring, and large-scale operations
-- Kafka Connect, Kafka Streams, and ksqlDB
-- KRaft mode (ZooKeeper-free), Tiered Storage, and recent version changes
+Contributions, suggestions for additional books, or pull requests for chapter summaries are welcome!
 
-## Book Table of Contents (2nd Edition)
+### Current Structure (Chapter 1 Example)
+- Full summaries per chapter
+- Key concepts explained with diagrams & production notes
+- Links to relevant online resources (blogs, videos, GitHub demos)
+
+See the `chapters/` folder for detailed summaries.
+
+
+## Kafka: The Definitive Guide Book Table of Contents (2nd Edition)
 
 | Chapter | English Title                                      | Main Topics Covered                                                                 |
 |--------|----------------------------------------------------|-------------------------------------------------------------------------------------|
