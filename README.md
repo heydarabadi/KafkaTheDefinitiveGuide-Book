@@ -1,147 +1,149 @@
-# خلاصه و راهنمای جامع کتاب Kafka: The Definitive Guide  
-(ویرایش دوم - Real-Time Data and Stream Processing at Scale)
+# Kafka: The Definitive Guide – Summary & Knowledge Base
+**Real-Time Data and Stream Processing at Scale** (2nd Edition)
 
-<div dir="rtl">
+This project provides a deep, chapter-by-chapter, practical summary of the reference book **Kafka: The Definitive Guide (2nd Edition)** in Persian (Farsi), along with internals deep-dives, code examples, diagrams, and a curated list of the best up-to-date Kafka resources (as of 2026).
 
-این پروژه یک **خلاصه‌ی عمیق، فصل‌به‌فصل و کاملاً کاربردی** از کتاب مرجع **Kafka: The Definitive Guide** (ویرایش دوم) به زبان فارسی است.
-
-**نویسندگان کتاب:**  
+**Authors of the book:**  
 Gwen Shapira, Todd Palino, Rajini Sivaram, Krit Petty
 
-</div>
+## Project Goals
 
-## هدف پروژه
+- Readable, accurate, and practical chapter summaries in Persian (Farsi)
+- Clear explanations of key concepts with real-world examples and production-grade tips
+- In-depth exploration of Apache Kafka internals: replication, log structure, controller, ISR, partition assignment, leader election, ...
+- Collection of top-tier resources (**Awesome Kafka**): tools, blogs, videos, courses, open-source projects
 
-- ارائه خلاصه‌های **خوانا**، **دقیق** و **کاربردی** از هر فصل به زبان فارسی  
-- توضیح مفاهیم کلیدی همراه با **مثال‌های واقعی** و **نکات عملیاتی** (Production-grade)  
-- بررسی عمیق **معماری داخلی** (internals) آپاچی کافکا:  
-  replication، log structure، controller، ISR، partition assignment، leader election و ...  
-- جمع‌آوری منابع برتر (**Awesome Kafka**): ابزارها، کتاب‌ها، مقاله‌ها، ویدئوها، دوره‌ها و پروژه‌های متن‌باز مرتبط
+## Why This Book Matters
 
-## چرا این کتاب مهم است؟
+**Kafka: The Definitive Guide** is widely regarded as the most authoritative and comprehensive resource for deep Apache Kafka knowledge.  
+It covers everything from fundamentals to advanced production topics:
 
-این کتاب معتبرترین و جامع‌ترین منبع برای یادگیری **عمیق** آپاچی کافکا محسوب می‌شود.  
-از مفاهیم پایه تا موضوعات پیشرفته شامل:
+- Internal architecture and replication protocol
+- Durability, availability, and Exactly-Once Semantics guarantees
+- Security, monitoring, and large-scale operations
+- Kafka Connect, Kafka Streams, and ksqlDB
+- KRaft mode (ZooKeeper-free), Tiered Storage, and recent version changes
 
-- معماری داخلی و پروتکل replication  
-- تضمین‌های قابلیت اطمینان و Exactly-Once Semantics  
-- امنیت، مانیتورینگ و عملیات در مقیاس بزرگ  
-- Kafka Connect، Kafka Streams و ksqlDB  
-- KRaft (جایگزین ZooKeeper)، Tiered Storage و تغییرات جدید نسخه‌های اخیر
+## Book Table of Contents (2nd Edition)
 
-## فهرست فصل‌های کتاب (ویرایش دوم)
+| Chapter | English Title                                      | Main Topics Covered                                                                 |
+|--------|----------------------------------------------------|-------------------------------------------------------------------------------------|
+| 1      | Meet Kafka                                         | Pub/Sub basics, Topic, Partition, Broker, Producer/Consumer, Broker Cluster        |
+| 2      | Installing Kafka                                   | Installation, initial setup and configuration                                       |
+| 3      | Kafka Producers: Writing Messages to Kafka         | Producer API, configuration, acks, compression, batching, partitioning             |
+| 4      | Kafka Consumers: Reading Data from Kafka           | Consumer Groups, Offset Management, Rebalance, Commit strategies                   |
+| 5      | Managing Apache Kafka Programmatically             | AdminClient API, topic & config management, consumer groups, cluster metadata      |
+| 6      | Reliability Guarantees                             | Data durability, availability, In-Sync Replicas (ISR)                              |
+| 7      | Exactly-Once Semantics & Transactions              | Transactions, idempotent & transactional producers/consumers                       |
+| 8      | Kafka Internals                                    | Log structure, replication protocol, controller, leader election                   |
+| 9      | Operations at Scale                                | Partition reassignment, MirrorMaker 2, cluster expansion, backup & restore         |
+| 10     | Monitoring Kafka                                   | Metrics, JMX, Prometheus + Grafana, monitoring tools                               |
+| 11     | Security                                           | SSL/TLS, SASL, ACLs, authentication & authorization                                |
+| 12     | Kafka Connect                                      | Connector architecture, Source/Sink, Single Message Transforms (SMT)               |
+| 13     | Kafka Streams & ksqlDB                             | Stream processing, state stores, windowing, joins, aggregations, ksqlDB            |
 
-| فصل | عنوان فصل (انگلیسی)                          | موضوع اصلی خلاصه                                                                 |
-|-----|-----------------------------------------------|-----------------------------------------------------------------------------------|
-| ۱   | Meet Kafka                                    | مفاهیم پایه: Pub/Sub، Topic، Partition، Broker، Producer/Consumer، Broker Cluster |
-| ۲   | Installing Kafka                              | نصب، راه‌اندازی و پیکربندی اولیه                                                |
-| ۳   | Kafka Producers: Writing Messages to Kafka    | Producer API، پیکربندی، acknowledgment، compression، batching، partitioning      |
-| ۴   | Kafka Consumers: Reading Data from Kafka      | Consumer Group، Offset Management، Rebalance، Commit strategies                  |
-| ۵   | Managing Apache Kafka Programmatically        | AdminClient API، مدیریت تاپیک، کانفیگ، Consumer Group و ...                     |
-| ۶   | Reliability Guarantees                        | تضمین‌های دوام داده، Durability، Availability، In-Sync Replicas (ISR)          |
-| ۷   | Exactly-Once Semantics & Transactions         | تراکنش‌ها، idempotent producer، transactional producer/consumer                 |
-| ۸   | Kafka Internals                               | معماری داخلی: Log، Replication Protocol، Controller، Leader Election           |
-| ۹   | Operations in Scale                           | Reassignment، MirrorMaker 2، Cluster Expansion، Backup & Restore                |
-| ۱۰  | Monitoring Kafka                              | متریک‌ها، JMX، Prometheus + Grafana، ابزارهای مانیتورینگ                       |
-| ۱۱  | Security                                      | SSL/TLS، SASL، ACL، Authorization، Authentication                               |
-| ۱۲  | Kafka Connect                                 | معماری Connector، Source/Sink، Single Message Transforms (SMT)                 |
-| ۱۳  | Kafka Streams & ksqlDB                        | Stream Processing، State Stores، Windowing، Joins، Aggregations، ksqlDB         |
+**Advanced / newer topics** (depending on updates): Tiered Storage, KRaft mode (ZooKeeper removal), recent API changes, ...
 
-> **فصل‌های پیشرفته‌تر** (بسته به نسخه و آپدیت‌ها): Tiered Storage، KRaft mode (بدون ZooKeeper)، تغییرات جدید API و ...
-
-## ساختار ریپازیتوری
-
+## Repository Structure
 ```text
-.
-├── docs/                  # خلاصه‌های فصل‌به‌فصل (فایل‌های markdown جداگانه)
+├── docs/                  # Chapter-by-chapter summaries (separate markdown files)
 │   ├── ch01-meet-kafka.md
 │   ├── ch02-installing-kafka.md
 │   ├── ch03-producers.md
 │   ├── ch04-consumers.md
 │   └── ...
-├── internals/             # بررسی عمیق معماری داخلی کافکا
+├── internals/             # Deep dives into Kafka internals
 │   ├── log-structure.md
 │   ├── replication-protocol.md
 │   ├── controller.md
 │   ├── partition-assignment.md
 │   └── ...
-├── awesome-kafka/         # لیست منابع عالی (Awesome List)
+├── awesome-kafka/         # Curated list of excellent Kafka resources
 │   └── README.md
-├── examples/              # کدهای نمونه (Java, Spring Boot, Kafka Streams, ksqlDB, ...)
-├── images/                # دیاگرام‌ها و تصاویر توضیحی
+├── examples/              # Sample code (Java, Spring Boot, Kafka Streams, ksqlDB, Python, Quarkus, ...)
+├── images/                # Explanatory diagrams and images
 ├── CONTRIBUTING.md
-└── README.md              # این فایل
+└── README.md              # This file
 ```
 
 
 
+## Awesome Kafka
 
-# Awesome Kafka
+**Best and most up-to-date Kafka resources (as of 2026)**  
+Curated list of tools, monitoring solutions, Schema Registries, blogs, courses, videos, and interesting open-source projects.
 
-بهترین و به‌روزترین منابع مرتبط با **آپاچی کافکا** (تا سال ۲۰۲۶)
+### GUI Clients / Admin Tools
 
-لیست جامع ابزارها، مانیتورینگ، Schema Registry، بلاگ‌ها، دوره‌های آموزشی، ویدئوها و پروژه‌های متن‌باز مرتبط با Kafka
+- **AKHQ** – Modern, lightweight, powerful UI
+- **Kafka UI** – Beautiful, responsive, team-friendly
+- **Offset Explorer** (formerly Kafka Tool) – Classic, very feature-complete
+- **CMAK** (Yahoo Kafka Manager) – Still widely used in many organizations
+- **Kafdrop** – Lightweight and simple
+- **Lenses** – Commercial but very powerful
+- **Redpanda Console** – Great for Redpanda, works with Kafka too
+- **Kpow** – Advanced, suitable for large environments
 
-## ابزارهای گرافیکی و مدیریت (GUI Clients / Admin Tools)
+### Monitoring & Observability
 
-- **AKHQ** – رابط کاربری مدرن، سبک و قدرتمند  
-- **Kafka UI** – زیبا، واکنش‌گرا و مناسب تیم‌ها  
-- **Offset Explorer** (قبلاً Kafka Tool) – ابزار کلاسیک و بسیار کامل  
-- **CMAK** (Kafka Manager از Yahoo) – هنوز در بسیاری از سازمان‌ها استفاده می‌شود  
-- **Kafdrop** – سبک و ساده  
-- **Lenses** – تجاری اما بسیار قدرتمند  
-- **Redpanda Console** – مخصوص Redpanda ولی با Kafka هم کار می‌کند  
-- **Kpow** – پیشرفته و مناسب محیط‌های بزرگ  
+- **Prometheus + Grafana + JMX Exporter** – Most popular open-source stack
+- **Confluent Control Center** – Most comprehensive commercial solution
+- **Burrow** – Specialized consumer lag monitoring
+- **Kafka Lag Exporter** – Prometheus-ready lag metrics
+- **Cruise Control** – Automatic partition balancing & smart rebalancing
+- **Confluent Telemetry** – Advanced metrics collection
 
-## مانیتورینگ و Observability
+### Schema Registry
 
-- **Prometheus + Grafana + JMX Exporter** – ترکیب استاندارد open-source  
-- **Confluent Control Center** – جامع‌ترین راه‌حل تجاری  
-- **Burrow** – متخصص در مانیتورینگ Consumer Lag  
-- **Kafka Lag Exporter** – برای Prometheus  
-- **Cruise Control** – بالانس خودکار پارتیشن‌ها و rebalance هوشمند  
-- **Confluent Telemetry** – metrics پیشرفته  
+- **Confluent Schema Registry** – Industry standard
+- **Apicurio Registry** – Fully open-source, powerful alternative
+- **Karapace** – Lightweight, Confluent-compatible
+- **AWS Glue Schema Registry** – Good choice in AWS ecosystems
 
-## Schema Registry
+### Notable Blogs & Authors
 
-- **Confluent Schema Registry** – استاندارد صنعتی  
-- **Apicurio Registry** – جایگزین کاملاً open-source و قدرتمند  
-- **Karapace** – سبک و سازگار با Confluent Schema Registry  
-- **AWS Glue Schema Registry** – اگر در اکوسیستم AWS هستید  
+- [Confluent Blog](https://www.confluent.io/blog/) – Official, up-to-date articles
+- **Gwen Shapira** – Co-author of Kafka: The Definitive Guide
+- **Kai Waehner** – Deep streaming & future-of-Kafka analysis
+- **Jeqo** – Practical tips & real-world experience
+- **Stéphane Maarek** – High-quality educational content
+- **Robin Moffatt** – Deep & practical insights
+- **Bill Bejeck** – Kafka Streams book author
+- **Matthias Sax** – Kafka Streams team @ Confluent
 
-## بلاگ‌ها و نویسندگان برجسته
+### Courses & Videos
 
-- [Confluent Blog](https://www.confluent.io/blog/) – مقالات رسمی و به‌روز  
-- **Gwen Shapira** – یکی از نویسندگان کتاب Kafka: The Definitive Guide  
-- **Kai Waehner** – تحلیل‌های بسیار عمیق در حوزه streaming و آینده کافکا  
-- **Jeqo** – نکات عملی و تجربیات واقعی [](https://jeqo.github.io/)  
-- **Stéphane Maarek** – آموزش‌های باکیفیت و بلاگ  
-- **Robin Moffatt** – مطالب عمیق و کاربردی  
-- **Bill Bejeck** – نویسنده کتاب Kafka Streams  
-- **Matthias Sax** – از تیم Kafka Streams در Confluent  
+- **Confluent Developer** – Excellent free & paid courses
+- **Kafka: The Definitive Guide** – Book + related O'Reilly courses
+- **Kafka Summit** – Annual conference talks (YouTube)
 
-## دوره‌های آموزشی و ویدئوها
+**Recommended YouTube Channels:**
 
-- **Confluent Developer** – دوره‌های رایگان و پولی بسیار باکیفیت  
-- **Kafka: The Definitive Guide** – کتاب + دوره‌های مرتبط (O'Reilly)  
-- **Kafka Summit** – ویدئوهای کنفرانس سالانه (YouTube)  
+- [Confluent](https://www.youtube.com/c/Confluent)
+- [Gwen Shapira](https://www.youtube.com/@gwenshap)
+- [Kai Waehner – Streaming Database](https://www.youtube.com/@kaiwaehner)
+- [Stéphane Maarek](https://www.youtube.com/c/StephaneMaarek)
+- [Tim Berglund (Confluent)](https://www.youtube.com/@timburglund)
 
-**کانال‌های یوتیوب پیشنهادی:**
+### Interesting Open-Source Projects Built Around / For Kafka
 
-- [Confluent](https://www.youtube.com/c/Confluent)  
-- [Gwen Shapira](https://www.youtube.com/@gwenshap)  
-- [Kai Waehner – Streaming Database](https://www.youtube.com/@kaiwaehner)  
-- [Stéphane Maarek](https://www.youtube.com/c/StephaneMaarek)  
-- [Tim Berglund (Confluent)](https://www.youtube.com/@timburglund)  
+- **Strimzi** – Kafka Operator for Kubernetes
+- **kPow** – Advanced management & observability
+- **Kouncil** – Modern, lightweight UI
+- **Spring Cloud Stream + Kafka** – Sample projects
+- **Micronaut Kafka** – Reactive examples
+- **Quarkus Kafka** – Fast, low-memory, native
+- **ksqlDB + Kafka Streams** – Demos & boilerplates
+- **WarpStream** – Kafka-compatible, ZooKeeper-free, object-storage backend
+- **Redpanda** – High-performance Kafka-compatible alternative
 
-## پروژه‌های متن‌باز جالب ساخته‌شده با/برای کافکا
+## Contributing
 
-- **Strimzi** – Kafka Operator برای Kubernetes  
-- **kPow** – مدیریت و مشاهده پیشرفته  
-- **Kouncil** – رابط کاربری مدرن و سبک  
-- **Spring Cloud Stream + Kafka** – پروژه‌های نمونه  
-- **Micronaut Kafka** – مثال‌های reactive  
-- **Quarkus Kafka** – سریع، کم‌مصرف و native  
-- **ksqlDB + Kafka Streams** – دموها و boilerplateهای آماده  
-- **WarpStream** – Kafka-compatible بدون ZooKeeper و با object storage  
-- **Redpanda** – جایگزین عملکرد بالا و Kafka-compatible
+We welcome contributions!  
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+## License
+
+MIT License – feel free to use, modify, and share.
+
+**Last updated:** February 2026
