@@ -16,6 +16,8 @@ We are building a complete learning path focused on **understanding Kafka intern
 - Curated **Awesome Kafka** list: top blogs, authors, courses, videos, open-source tools, books, and more
 - Expandable structure: we plan to add summaries and deep-dives for **more Kafka-related books** in the future
 
+---
+
 ### Why This Book Matters (Kafka: The Definitive Guide)
 It remains the gold standard for deep Kafka knowledge, covering:
 - Internal architecture & replication protocol
@@ -26,17 +28,6 @@ It remains the gold standard for deep Kafka knowledge, covering:
 - KRaft mode (ZooKeeper-free), Tiered Storage, and recent Kafka version features
 <img width="570" height="740" alt="image" src="https://github.com/user-attachments/assets/2f0423c7-3f88-425e-93f7-10c12720fdf4" />
 
----
-
-
-### Planned Book Expansions
-We will gradually add summaries and internals deep-dives for other high-quality Kafka/streaming books, including (but not limited to):
-- Kafka Streams in Action (Bill Bejeck)
-- Kafka Connect in Action (or similar connector-focused books)
-- Designing Data-Intensive Applications (relevant Kafka chapters – Martin Kleppmann)
-- Streaming Systems (Tyler Akidau et al.)
-- Building Event-Driven Microservices (Adam Bellemare)
-- And more emerging titles on KRaft, Tiered Storage, and modern streaming patterns
 
 
 ## Kafka: The Definitive Guide Book Table of Contents (2nd Edition)
@@ -57,7 +48,20 @@ We will gradually add summaries and internals deep-dives for other high-quality 
 | 12     | Kafka Connect                                      | Connector architecture, Source/Sink, Single Message Transforms (SMT)               |
 | 13     | Kafka Streams & ksqlDB                             | Stream processing, state stores, windowing, joins, aggregations, ksqlDB            |
 
-**Advanced / newer topics** (depending on updates): Tiered Storage, KRaft mode (ZooKeeper removal), recent API changes, ...
+
+---
+
+
+### Planned Book Expansions
+We will gradually add summaries and internals deep-dives for other high-quality Kafka/streaming books, including (but not limited to):
+- Kafka Streams in Action (Bill Bejeck)
+- Kafka Connect in Action (or similar connector-focused books)
+- Designing Data-Intensive Applications (relevant Kafka chapters – Martin Kleppmann)
+- Streaming Systems (Tyler Akidau et al.)
+- Building Event-Driven Microservices (Adam Bellemare)
+- And more emerging titles on KRaft, Tiered Storage, and modern streaming patterns
+
+
 
 ## Repository Structure
 ```text
