@@ -26,7 +26,7 @@ It remains the gold standard for deep Kafka knowledge, covering:
 - KRaft mode (ZooKeeper-free), Tiered Storage, and recent Kafka version features
 <img width="570" height="740" alt="image" src="https://github.com/user-attachments/assets/2f0423c7-3f88-425e-93f7-10c12720fdf4" />
 
-
+---
 
 
 ### Planned Book Expansions
