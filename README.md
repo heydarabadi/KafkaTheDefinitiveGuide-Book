@@ -24,6 +24,10 @@ It remains the gold standard for deep Kafka knowledge, covering:
 - Security, monitoring, large-scale operations
 - Kafka Connect, Kafka Streams, ksqlDB
 - KRaft mode (ZooKeeper-free), Tiered Storage, and recent Kafka version features
+<img width="570" height="740" alt="image" src="https://github.com/user-attachments/assets/2f0423c7-3f88-425e-93f7-10c12720fdf4" />
+
+
+
 
 ### Planned Book Expansions
 We will gradually add summaries and internals deep-dives for other high-quality Kafka/streaming books, including (but not limited to):
@@ -33,15 +37,6 @@ We will gradually add summaries and internals deep-dives for other high-quality 
 - Streaming Systems (Tyler Akidau et al.)
 - Building Event-Driven Microservices (Adam Bellemare)
 - And more emerging titles on KRaft, Tiered Storage, and modern streaming patterns
-
-Contributions, suggestions for additional books, or pull requests for chapter summaries are welcome!
-
-### Current Structure (Chapter 1 Example)
-- Full summaries per chapter
-- Key concepts explained with diagrams & production notes
-- Links to relevant online resources (blogs, videos, GitHub demos)
-
-See the `chapters/` folder for detailed summaries.
 
 
 ## Kafka: The Definitive Guide Book Table of Contents (2nd Edition)
@@ -66,26 +61,25 @@ See the `chapters/` folder for detailed summaries.
 
 ## Repository Structure
 ```text
-├── docs/                  # Chapter-by-chapter summaries (separate markdown files)
-│   ├── ch01-meet-kafka.md
-│   ├── ch02-installing-kafka.md
-│   ├── ch03-producers.md
-│   ├── ch04-consumers.md
-│   └── ...
-├── internals/             # Deep dives into Kafka internals
+├── docs/                          # Chapter-by-chapter summaries (separate markdown files)
+│   └── book-kafka-definitive-guide/  # Organized by book name
+│       ├── ch01-meet-kafka.md
+│       ├── ch02-installing-kafka.md
+│       ├── ch03-producers.md
+│       ├── ch04-consumers.md
+│       └── ...                     # One file per chapter
+├── internals/                     # Deep dives into Kafka internals (standalone or cross-book)
 │   ├── log-structure.md
 │   ├── replication-protocol.md
 │   ├── controller.md
 │   ├── partition-assignment.md
 │   └── ...
-├── awesome-kafka/         # Curated list of excellent Kafka resources
+├── awesome-kafka/                 # Curated list of excellent Kafka resources
 │   └── README.md
-├── examples/              # Sample code (Java, Spring Boot, Kafka Streams, ksqlDB, Python, Quarkus, ...)
-├── images/                # Explanatory diagrams and images
+├── examples/                      # Sample code (Java, Spring Boot, Kafka Streams, ksqlDB, Python, Quarkus, ...)
 ├── CONTRIBUTING.md
-└── README.md              # This file
+└── README.md                      # This file
 ```
-
 
 
 ## Awesome Kafka
